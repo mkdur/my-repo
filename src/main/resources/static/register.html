@@ -1,0 +1,79 @@
+<div class="panel-heading"><span class="lead">Sign up</span></div>
+              <div class="formcontainer">
+                  <form ng-submit="ctrl.submit()" name="myFormR" class="form-horizontal">
+                      <div class="row">
+                          <div class="form-group col-md-8">
+                              <label class="col-md-2 control-lable" for="file">UserName</label>
+                              <div class="col-md-4">
+                                  <input type="text" ng-model="ctrl.user.name" name="unameR" class="username form-control input-sm" placeholder="Enter your name" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myFormR.$dirty">
+                                      <span ng-show="myFormR.uname.$error.required">This is a required field</span>
+                                      <span ng-show="myFormR.uname.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myFormR.uname.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> 
+						
+						<div class="row">
+                          <div class="form-group col-md-8">
+                              <label class="col-md-2 control-lable" for="file">First Name</label>
+                              <div class="col-md-4">
+                                  <input type="text" ng-model="ctrl.user.name" name="unameF" class="username form-control input-sm" placeholder="Enter your first name" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myFormR.$dirty">
+                                      <span ng-show="myFormR.uname.$error.required">This is a required field</span>
+                                      <span ng-show="myFormR.uname.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myFormR.uname.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> 
+					  
+					  <div class="row">
+                          <div class="form-group col-md-8">
+                              <label class="col-md-2 control-lable" for="file">Last Name</label>
+                              <div class="col-md-4">
+                                  <input type="text" ng-model="ctrl.user.name" name="unameL" class="username form-control input-sm" placeholder="Enter your last name" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myFormR.$dirty">
+                                      <span ng-show="myFormR.uname.$error.required">This is a required field</span>
+                                      <span ng-show="myFormR.uname.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myFormR.uname.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> 
+					  
+					  <div class="row">
+                          <div class="form-group col-md-8">
+                              <label class="col-md-2 control-lable" for="file">Email</label>
+                              <div class="col-md-4">
+                                  <input type="text" ng-model="ctrl.user.name" name="unameE" class="username form-control input-sm" placeholder="Enter your email" required ng-minlength="3"/>
+                                  <div class="has-error" ng-show="myFormR.$dirty">
+                                      <span ng-show="myFormR.uname.$error.required">This is a required field</span>
+                                      <span ng-show="myFormR.uname.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myFormR.uname.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> 
+                      <div class="row">
+                          <div class="form-group col-md-8">
+                              <label class="col-md-2 control-lable" for="file">Password</label>
+                              <div class="col-md-4">
+                                  <input type="password" ng-model="ctrl.user.password" name="passwordR" class="password form-control input-sm" placeholder="Enter your password" required/>
+                                  <div class="has-error" ng-show="myFormR.$dirty">
+                                      <span ng-show="myFormR.password.$error.required">This is a required field</span>
+                                      <span ng-show="myFormR.password.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="form-actions floatRight col-md-4">
+                              <input type="submit"  value="SignUp" class="btn btn-primary btn-sm" ng-disabled="myFormR.$invalid">
+                          </div>
+                      </div>
+                  </form>
+				  
+              </div>

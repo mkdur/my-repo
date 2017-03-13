@@ -1,0 +1,65 @@
+<meta http-equiv="refresh" content="15"> 
+<div style="padding-left:130px;padding-right:200px;">
+<div class="panel-heading"><span class="lead"> </span></div>
+              <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <!-- <th>ID.</th> -->
+                              <th style="font-size: 8pt;">Hi {{ctrl.currentUser}}!</th>
+                              <th width="10%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+					  
+                          <tr ng-repeat="u in ctrl.users">
+						  <div ng-show="ctrl.checkCurrentUser(u.name)">
+                              <!-- <td><span ng-bind="u.id"></span></td> -->
+                              <td><div  ng-bind="u.name" ng-click="ctrl.chat(u.name)"></div></td>
+                           </div>   
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+			<div class="tablecontainer" id="chatTableDiv" >  
+			  <table id="chatTable" class="table table-hover">
+                      <thead>
+                          <tr>
+                              <!-- <th>ID.</th> -->
+                              <th style="font-size: 8pt;">Chat with : {{ctrl.targetUser}}</th>
+                              <th width="15%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+						
+                          <tr ng-repeat="c in ctrl.chats">
+                              <td>
+								<p style="color:red;font-size: 8pt;" ng-bind="c.author"></p>
+								<p  style="padding-left: 70px;font-size: 10pt;" ng-bind="c.message">{{c.message}}</p>
+								<p  style="padding-right: 70px;font-size: 8pt;" ng-bind="c.chatTime">{{c.chatTime}}</p>
+							</td>
+                          </tr>
+						  
+                      </tbody>
+                  </table>
+				  <tr>
+						  <td>
+						  <div class="formcontainer">
+							<form ng-submit="ctrl.send()" name="sendForm" class="form-horizontal">
+								<div class="row">
+									<div class="form-group col-md-8">
+										  <div class="col-md-7">
+											  <input type="text" ng-model="ctrl.chatMsg.message" name="uchat" class="username form-control input-sm" placeholder="Type a message" required ng-minlength="1"/>
+											  <div class="has-error" ng-show="sendForm.$dirty">
+											  </div>
+										  </div>
+                              <input type="submit"  value="Send" class="btn btn-primary btn-sm" ng-disabled="sendForm.$invalid">
+						</div>
+										  
+                          </div>
+							</form>
+                      </div> 
+					  </td>
+					  </tr>
+			</div>  
+ </div>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Application using Spring and Angularjs</title>
+
+<style>
+table {
+    width: 15%;
+    display:block;
+}
+thead {
+    display: inline-block;
+    width: 15%;
+    height: 20px;
+}
+tbody {
+    height: 200px;
+    display: inline-block;
+    width: 35%;
+    overflow: auto;
+}
+</style>
+<script src="angular.min.js"></script>
+ <script src="angular-route.js"></script>
+  <script src="jquery.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="user_service.js"></script>
+
+
+</head>
+<body ng-app="single-page-app">
+  <div ng-controller="cfgController as ctrl">
+  <div>
+ 
+</div>
+  <br/>
+ 
+  <div ng-view class="jumbotron"></div>
+  </div>
+ 
+</body>
+</html>
